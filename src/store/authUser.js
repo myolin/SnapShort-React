@@ -1,7 +1,6 @@
 import toast from "react-hot-toast";
 import { create } from "zustand";
 import api from '../api/api'
-import axios from "axios";
 
 export const useAuthStore = create((set) => ({
   user: null,
