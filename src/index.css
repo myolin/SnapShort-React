@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-box: 17 24 39;
+  --box-border: 243 244 246 / 0.1;
+}
+
+@layer utilities {
+  .bg-custom-gradient {
+    background-image: linear-gradient(to right, #3e36a8, #7a1fd0);
+  }
+
+  .bg-dark-blue {
+    background-color: #152238;
+  }
+
+  .bg-light-navy {
+    background-color: #1E2E48;
+  }
+
+  .bg-box-bg {
+    background-color: rgb(var(--color-box));
+  }
+
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .bg-wallpaper {
+    @apply bg-no-repeat bg-cover bg-center min-h-screen;
+    background-image: url("/wallpaper.png");
+    color: #ffff;
+  }
+
+  .link-color {
+    color: #2a5bd7;
+  }
+}
