@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
 import { create } from "zustand";
 import api from '../api/api'
+import axios from "axios";
 
 export const useAuthStore = create((set) => ({
   user: null,
@@ -28,7 +29,7 @@ export const useAuthStore = create((set) => ({
   login: async (credentials, navigate) => {
     set({isLoggingIn:true});
     try {
-      const response = await api.post(
+      const response = await axios.post(
         "/api/auth/login",
         credentials
       );
